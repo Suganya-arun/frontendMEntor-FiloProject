@@ -1,0 +1,202 @@
+
+body{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background-color: hsl(229, 57%, 11%);
+
+    color:white;
+    font-size: 14px;
+}
+.container-1
+{
+    border:1px solid transparent;
+    border-radius:10px 80px 10px 10px;
+    background-color:hsl(228, 56%, 26%) ;
+    padding:10% 10%;
+}
+.container-2
+{
+    border:1px solid transparent;
+    border-radius:10px 10px 10px 10px;
+    background-color:hsl(228, 56%, 26%) ;
+    padding:10% 10%;
+    margin-top:2em;
+    position: relative;
+}
+.main-container
+{
+    /* display:flex;
+    flex-direction: column; */
+    padding:25% 3%;
+    width:15rem;
+    margin:0 auto 0 auto;
+    background-image: url("../images/bg-mobile.png");
+    background-repeat: no-repeat;
+}
+p{
+    opacity:75%;
+    font-size: x-small;
+}
+.logo{
+width:6rem;
+}
+.Logo
+{
+    margin-bottom:2em;
+    text-align: left;
+}
+.Icon{
+     text-align: left;
+}
+.icon
+{
+    height:15px;
+    width:15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%);
+    padding:5%;
+    margin-right:10px;
+   
+}
+/* .slider
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 250px;
+    background:linear-gradient(hsl(6, 100%, 80%) ,hsl(335, 100%, 65%));
+
+} */
+/**********************Range Slider*********************** starts******/
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  appearance: none;
+  width: 10rem; /* Specific width is required for Firefox. */
+ /* background-color:hsl(229, 57%, 11%) ; */
+  background: linear-gradient(90deg,hsl(6, 100%, 80%),hsl(335, 100%, 65%));/* Otherwise white in Chrome*/
+  height:0.7rem; 
+  border-radius:2rem;
+  overflow: hidden;
+}
+/* input[type=range]::-webkit-slider-runnable-track
+{
+    height:1rem;
+    margin-top:-1px;
+    -webkit-appearance: none;
+color: aqua;
+} */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width:0.6rem;
+  height:0.6rem;
+  border-radius: 50%;
+  background:white;
+  box-shadow: 12.3rem 0 0 12rem hsl(229, 57%, 11%);
+  -webkit-border-radius:50%;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  color: aqua;
+}
+.values
+{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+.GB
+{
+    width:7rem;
+    background-color: white;
+    padding: 0.5rem 0.5rem;
+    margin:0 auto 0 auto;
+    border:1px solid transparent;
+    border-radius:1rem;
+    color:black;
+    text-transform: uppercase;
+    position:relative;
+    /* right: 6rem; */
+    bottom:2rem;
+}
+.GB h2{
+    padding: 0;
+    margin: 0;
+}
+b{
+  font-size: 2rem;  
+  letter-spacing: 1px;
+}
+small{
+    opacity:50%;
+    font-size: .8rem;
+}
+
+  /* Hides the slider so custom styles can be added
+  background:hsl(228, 56%, 26%) ; 
+  border-color: white;
+  color: white;
+} */
+
+/**********************Range Slider*********************** starts******/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (width>375px)
+{
+    .main-container
+    {
+        display:flex;
+        flex-direction: row;
+        padding:21% 14%;
+       width:100%;
+       gap:2rem;
+       background: none;
+
+    }
+    .container-1{
+        width:20rem;
+        padding:2rem;
+    }
+    .container-2{
+        width:34rem;
+        padding: 1rem 3rem 0 3rem;
+        text-align: left;
+    }
+   p
+   {
+    font-size: large;
+   }
+    body
+    {
+       background-image: url("../images/bg-desktop.png");
+       background-position: bottom;
+       background-size: contain;
+       background-repeat: no-repeat;
+    }
+    input[type=range] {
+        width:33rem;
+    }
+    .GB{
+        width: 8rem;
+        height: 3rem;
+        right: 20rem;
+        bottom: 2rem;
+    }
+    .right-point{
+        width: 0;
+        height: 0;
+         border-left: 10vh solid transparent; 
+    	/* border-right: 10vh solid white; */
+        border-top: 10vh solid white;
+        position: absolute;
+        top: 70%;
+        right: 0vh;
+        transform: rotate(2deg);
+    }
+}
